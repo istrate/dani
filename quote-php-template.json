@@ -25,7 +25,7 @@
       "spec": {
         "containers": [
           {
-            "image": "quay.io/${RHT_OCP4_QUAY_USER}/do180-mysql-80-rhel8",
+            "image": "quay.io/${QUAY_USER}/mysql8",
             "name": "mysql",
             "env": [
               {
@@ -96,7 +96,7 @@
                 "cpu": "0.5"
               }
             },
-            "image": "quay.io/${RHT_OCP4_QUAY_USER}/do180-quote-php",
+            "image": "quay.io/${QUAY_USER}/php-app",
             "name": "quote-php",
             "ports": [
               {
@@ -174,7 +174,7 @@
         ],
         "resources": {
           "requests": {
-            "storage": "1Mi"
+            "storage": "100Mi"
           }
         }
       }
@@ -191,7 +191,7 @@
         ],
         "resources": {
           "requests": {
-            "storage": "10Mi"
+            "storage": "100Mi"
           }
         }
       }
@@ -200,7 +200,7 @@
   "parameters": [
     {
       "description": "Quay namespace the images are stored in",
-      "name": "RHT_OCP4_QUAY_USER",
+      "name": "QUAY_USER",
       "required": true
     }
   ]
